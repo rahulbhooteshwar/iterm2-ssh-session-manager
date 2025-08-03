@@ -53,25 +53,19 @@ This error occurred because PyInstaller wasn't properly bundling Gradio's fronte
 
 ## Usage
 
-### Building the Improved Version
+### Building the Application
 
 ```bash
-# Build with enhanced configuration
-make build-improved
+# Build with enhanced configuration (now the default)
+make build
 
-# Install the improved version
-make install-improved
-
-# Test the improved build
-./test_improved_build.sh
+# Install the application
+make install
 ```
 
 ### Testing
 
-The test script (`test_improved_build.sh`) performs:
-1. Basic functionality test
-2. Web interface startup test
-3. Process stability verification
+The application now includes comprehensive error handling and asset management by default.
 
 ## Technical Details
 
@@ -129,34 +123,18 @@ def setup_bundled_environment():
 4. **Easier debugging**: Better error messages and logging
 5. **Maintained compatibility**: Works with both bundled and development environments
 
-## Migration
+## Current Status
 
-To use the improved version:
-
-1. **Replace the original spec file:**
-   ```bash
-   cp launch_improved.spec launch.spec
-   ```
-
-2. **Update the web interface:**
-   ```bash
-   cp web_interface_improved.py web_interface.py
-   ```
-
-3. **Rebuild the application:**
-   ```bash
-   make build-improved
-   make install-improved
-   ```
+The improved version is now the default implementation. All builds use the enhanced PyInstaller configuration and improved web interface.
 
 ## Troubleshooting
 
-If you still experience issues:
+If you experience issues:
 
 1. **Check the build logs** for any missing dependencies
 2. **Verify the executable size** - it should be larger due to included assets
-3. **Test with the test script** to identify specific issues
-4. **Check the runtime logs** for detailed error messages
+3. **Check the runtime logs** for detailed error messages
+4. **Ensure you're using the latest version** with enhanced asset handling
 
 ## Future Improvements
 

@@ -273,7 +273,7 @@ uv run python main.py --ui --port 8080
 ## Building from Source
 
 ```bash
-# Build standalone executable
+# Build standalone executable (with enhanced PyInstaller configuration)
 make build
 
 # Build and install globally
@@ -301,7 +301,7 @@ uv run python main.py --list
 # Install PyInstaller for building
 uv add pyinstaller
 
-# Build executable manually
+# Build executable manually (with enhanced configuration)
 uv run pyinstaller launch.spec
 
 # Install globally
